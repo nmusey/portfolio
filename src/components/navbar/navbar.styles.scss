@@ -1,0 +1,33 @@
+nav {
+    position: fixed;
+    top: 0px;
+    
+    width: 100vw;
+    height: 50px;
+
+    text-decoration: none;
+    color: #333;
+
+    display: flex;
+    justify-content: space-between;
+
+    .nav-left {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .nav-right {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 30px;
+    }
+
+    .navbar-item {
+        margin-right: 30px;
+    }
+
+    a {
+        color: #333;
+    }
+
+}
