@@ -16,8 +16,8 @@ const Navbar = ({title, children}) => (
             </div>
         </a>
         <div className="nav-right">
-            { children.map( ({name, url}) => (
-            <a className="navbar-item" href={url}>
+            { children.map( ({name, url, id}) => (
+            <a className="navbar-item" href={url} key={id}>
                 <h3>{name}</h3>
             </a>
             ))}

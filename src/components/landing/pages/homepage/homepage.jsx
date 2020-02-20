@@ -25,9 +25,10 @@ class Homepage extends React.Component {
                 <Navbar title="Nick Musey">
                     { this.projects }
                 </Navbar>
-                <Landing 
-                    title="Nick Musey" 
-                    subtitle="SHABOOYA ROLE CALL"
+                <Landing title="Nick Musey"
+                    background={true}
+                    bgColor1="rgba(40,180,133,0.2))"
+                    bgColor2="rgba(40,180,133,0.9)"
                 />
             </div>
         )

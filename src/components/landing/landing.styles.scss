@@ -1,0 +1,62 @@
+:root {
+    --profile-size: 256px;
+}
+
+
+body {
+    // width: 100vw;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+nav {
+    color: #333333;
+}
+
+.landing {
+    // display: grid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.landing-right {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+
+.landing-left {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 50%;
+}
+
+.landing-background {
+    background-image: linear-gradient( rgba(40,180,133,0.3), rgba(40,180,133,0.7) ),
+                        url('./images/background.jpeg');
+    background-size: cover;
+    width: 100vw;
+    height: calc(100vh - 50px);
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.profilePicture {
+    height: var(--profile-size );
+    border-radius: var(--profile-size);
+}
+
+.one-line {
+    display: block;
+    width: 100%;
+}
