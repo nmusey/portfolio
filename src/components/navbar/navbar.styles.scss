@@ -11,6 +11,10 @@ nav {
     .nav-left {
         display: flex;
         justify-content: flex-start;
+
+        :first-child {
+            padding-left: 30px;
+        }
     }
 
     .nav-right {

@@ -1,6 +1,21 @@
 /* Global Styles */
 /* Nick Musey */
 
+body {
+    width: 100vw;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+    color: #333333;
+}
+
+nav {
+    color: #333333;
+    width: 100vw;
+}
+
 .landing {
     height: calc(100vh - 50px);
 } 

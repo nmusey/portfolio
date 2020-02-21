@@ -1,0 +1,20 @@
+.double-column {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.right-double-column {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-double-column {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

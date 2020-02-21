@@ -4,8 +4,8 @@ import './navbar.styles.scss';
 
 /** Navbar Component
  * 
- * Expects a title as a prop
- * Child elements should be objects with a name and url
+ * @param title title for the left side of the navbar
+ * @param children JSX elements with name, id, and url attributes
  * 
  */
 const Navbar = ({title, children}) => (
