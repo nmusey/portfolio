@@ -1,8 +1,8 @@
 import React from 'react';
 
-import ProfileImage from '../../resources/images/profile.jpeg';
 import DoubleColumn from '../double-column/double-column';
 
+import ProfileImage from './profile.jpeg';
 import './landing.styles.scss';
 
 
@@ -18,8 +18,8 @@ const Landing = ({ title, subtitle }) => {
         <div className="landing-bg">
             <DoubleColumn>
                 <img 
-                    src={ProfileImage} 
-                    alt="Profile"
+                    src={ProfileImage}
+                    alt="Profile of Nick"
                     className="profilePicture"
                 />
                 <div id="landing-text">
