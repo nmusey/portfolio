@@ -2,24 +2,24 @@ import React from 'react';
 
 import DoubleColumn from '../double-column/double-column';
 
-import ProfileImage from './profile.jpeg';
 import './landing.styles.scss';
 
 
 /** Landing component
  * 
- * @param ProfileImage imported picture 
  * @param title title of the landing section
  * @param subtitle subtitle of the landing section
+ * @param picture Picture to be displayed
+ * @param altText Alternate text to the picture
  */
-const Landing = ({ title, subtitle }) => {
+const Landing = ({ title, subtitle, picture, altText }) => {
     
     return (
         <div className="landing-bg">
             <DoubleColumn>
                 <img 
-                    src={ProfileImage}
-                    alt="Profile of Nick"
+                    src={picture}
+                    alt={altText}
                     className="profilePicture"
                 />
                 <div id="landing-text">

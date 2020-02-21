@@ -4,9 +4,7 @@
 
 
 .landing-bg {
-    width: 100vw;
-    height: calc(100vh - 50px);
-
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -17,9 +15,4 @@
 .profilePicture {
     height: var(--profile-size );
     border-radius: var(--profile-size);
-}
-
-.one-line {
-    display: block;
-    width: 100%;
 }

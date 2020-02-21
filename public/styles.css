@@ -1,6 +1,10 @@
 /* Global Styles */
 /* Nick Musey */
 
+:root {
+    --navbar-height: 50px;
+}
+
 body {
     width: 100vw;
     background-size: cover;
@@ -16,13 +20,22 @@ nav {
     width: 100vw;
 }
 
+section {
+    margin-bottom: 50px
+}
+
 .homepage {
-    margin-top: -7vh;
+    margin-top: 7vh;
     margin-bottom: 7vh;
     padding-left: 2vw;
     padding-right: 2vw;
 }
 
-.landing {
-    height: calc(100vh - 50px);
+#landing-section {
+    height: calc(100vh - var(--navbar-height) );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: inline;
+    padding-top: var(--navbar-height);
 } 
