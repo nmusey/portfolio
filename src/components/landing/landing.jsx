@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ProfileImage from './images/profile.jpeg';
+import ProfileImage from '../../resources/images/profile.jpeg';
 import DoubleColumn from '../double-column/double-column';
 
 import './landing.styles.scss';
