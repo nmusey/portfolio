@@ -53,17 +53,9 @@ class ProjectContainer extends React.Component {
     }
 
 
-
+    
     componentDidMount() {
         this.setState( { projects: this.fetchRepos() } )
-        // this.setState( {
-        //     projects: [{
-        //         name: "Test1", 
-        //         url: "www.github.com",
-        //         id: 1
-        //     }],
-        //     isFetching: false
-        // })
     }
 
 

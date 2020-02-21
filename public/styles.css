@@ -16,10 +16,13 @@ nav {
     width: 100vw;
 }
 
+.homepage {
+    margin-top: -7vh;
+    margin-bottom: 7vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
 .landing {
     height: calc(100vh - 50px);
 } 
-
-#project-container {
-    
-}
