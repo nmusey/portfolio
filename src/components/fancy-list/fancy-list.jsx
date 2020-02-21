@@ -10,7 +10,7 @@ const FancyList = ({ title, array }) => (
     <div className="fancy-list">
         <h1>{title}</h1>
         <ul>
-            { array.map( item => (<li>{item}</li>) ) }
+            { array.map( item => { return (<li key={array.indexOf(item)}>{item}</li>) } ) }
         </ul>
     </div>
 )

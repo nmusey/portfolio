@@ -30,20 +30,15 @@ class ProjectContainer extends React.Component {
         let projects = [];
         fetch(`https://api.github.com/users/${this.props.username}/repos?per_page=${this.maxRepos}`)
             .then( res => res.json() )
-            .then( json => {
-                console.log(json);
-                return json;
-            })
             .then( repos => {
                 repos.forEach( 
                     repo => {
-                        const { name, id } = repo;
+                        const { name, description, id } = repo;
                         const url = `https://www.github.com/${this.username}/${name}`; // create the url for the project
-                        projects.push( { name, url, id} );
+                        projects.push( { name, description, url, id} );
                 });
                 this.setState({ isFetching: false });
             })
-            .then( () => console.log("All successful!") )
             .catch(err => {
                 console.error(err);
                 this.setState({ projects: { name: "Error fetching projects", id: 0, url: ""} })
@@ -61,9 +56,6 @@ class ProjectContainer extends React.Component {
 
 
     render() {
-
-        console.log(this.state);
-
         if (this.state.isFetching) {
             return (
                 <div className="project-container">
@@ -79,7 +71,11 @@ class ProjectContainer extends React.Component {
         } else {
             return (
                 <div className="project-container">
-                    { this.state.projects.map( proj => (<Project name={proj.name} key={proj.id} url={proj.url} />) ) }
+                    { this.state.projects.map( proj => (<Project name={proj.name} 
+                                                                description={proj.description} 
+                                                                key={proj.id} 
+                                                                url={proj.url} />) 
+                                            ) }
                 </div>
             )
         }
