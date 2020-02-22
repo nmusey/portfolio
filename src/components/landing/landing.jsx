@@ -24,7 +24,7 @@ const Landing = ({ title, subtitle, picture, altText }) => {
                 />
                 <div id="landing-text">
                     <h1>{title}</h1>
-                    <h2>{subtitle}</h2>
+                    <h3>{subtitle}</h3>
                 </div>
             </DoubleColumn>
         </div>

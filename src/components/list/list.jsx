@@ -8,7 +8,7 @@ import './list.styles.scss'
  */
 const List = ({ title, array }) => (
     <div className="list">
-        <span className="list-title"><h1>{title}</h1></span>
+        <span className="list-title"><h3>{title}</h3></span>
         <ul>
             { array.map( item => { return (<li key={array.indexOf(item)}>{item}</li>) } ) }
         </ul>
