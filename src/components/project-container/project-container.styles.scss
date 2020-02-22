@@ -5,3 +5,15 @@
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
 }
+
+@media (max-width: 900px) {
+    .project-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 400px) {
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+}
