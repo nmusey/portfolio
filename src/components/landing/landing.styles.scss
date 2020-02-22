@@ -18,3 +18,14 @@
 }
 
 
+@media (max-width: 552px) {
+    :root {
+        --profile-size: 256px;
+    }
+}
+
+@media (max-width: 300px) {
+    :root {
+        --profile-size: 128px;
+    }
+}
