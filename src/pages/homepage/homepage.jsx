@@ -26,6 +26,7 @@ const Homepage = () => {
         }
     ]
 
+    // These are rendered by  a component later
     const skills = [
         'Front-End Development using React',
         'RESTful API Development using Express.js and Node.js',
@@ -34,14 +35,20 @@ const Homepage = () => {
         'Object Oriented Programming'
     ]
 
+    // These are rendered by a component later
     const learningNow = [
         'React Hooks', 'Django', 'Artificial Intelligence',
         'Database Design'
     ]
 
+
+
     return (
         <main className="homepage">
-            <Navbar title="Nick Musey">
+            <Navbar 
+                title="Nick Musey"
+                titleLink="#landing"
+            >
                 {navbarLinks}
             </Navbar>
 
@@ -72,7 +79,6 @@ const Homepage = () => {
                     <h1>Contact</h1>
                     Feel free to contact me through email at nmusey@gmail.com with any questions or comments you might have.
                 </a>
-                
             </section>
         </main>
     )

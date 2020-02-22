@@ -8,6 +8,7 @@ import './double-column.scss';
  * 
  * Displays 2 children in side by side columns.
  * The first child will be on the left and vice versa.
+ * Collapses to one column for smaller screens.
  * 
  * @param children 2 JSX elements to be displayed
  */

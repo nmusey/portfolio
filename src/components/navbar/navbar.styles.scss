@@ -3,16 +3,19 @@ nav {
     top: 0px;
 
     background-color: white;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     
     width: 100%;
-    height: 50px;
+    min-height: 50px;
 
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-between;
 
     .nav-left {
         display: flex;
+        flex-direction: row;
         justify-content: flex-start;
 
         :first-child {
@@ -20,14 +23,26 @@ nav {
         }
     }
 
-    .nav-right {
+    .nav-item-container {
         display: flex;
-        justify-content: flex-end;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
         margin-right: 30px;
+        padding-left: 150px;
     }
 
-    .navbar-item {
+    .nav-item {
         margin-right: 30px;
     }
+}
 
+.nav-menu {
+        font-size: 4em;
+        cursor: pointer;
+        margin: 0;
+        margin-top: -12px;
+        padding: 0;
+        background: none;
+        border: none;  
 }

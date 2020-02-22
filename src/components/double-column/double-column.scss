@@ -12,6 +12,7 @@
     align-items: center;
     justify-content: center;
     padding-right: 30px;
+    padding-left: 30px;
 }
 
 .left-double-column {
@@ -21,4 +22,19 @@
     align-items: center;
     justify-content: center;
     padding-left: 30px;
+    padding-right: 30px;
+}
+
+@media (max-width: 900px), (max-aspect-ratio: 1){
+    .double-column {
+        flex-wrap: wrap;
+    }
+
+    .right-double-column {
+        width: 100%;
+    }
+
+    .left-double-column {
+        width: 100%;
+    }
 }
