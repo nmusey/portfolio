@@ -4,7 +4,7 @@ import Navbar from '../../components/navbar/navbar';
 import Landing from '../../components/landing/landing';
 import DoubleColumn from '../../components/double-column/double-column';
 import ProjectContainer from '../../components/project-container/project-container';
-import FancyList from '../../components/fancy-list/fancy-list';
+import List from '../../components/list/list';
 
 import ProfileImage from './profile.jpeg';
 import './homepage.styles.scss';
@@ -56,15 +56,23 @@ const Homepage = () => {
             
             <section id="project-section">
                 <a name="projects" href="#projects"><h1>Projects</h1></a>
-                <ProjectContainer id="project-container" username="nmusey"/>
+                <ProjectContainer id="project-container" username="nmusey" />
             </section>
             
             <section id="skill-section">
                 <a name="skills" href="#skills"><h1>Skills</h1></a>
                 <DoubleColumn>
-                    <FancyList title="My Skills" array={skills} />
-                    <FancyList title="What I'm Learning Now" array={learningNow} />
+                    <List title="My Skills" array={skills} />
+                    <List title="What I'm Learning Now" array={learningNow} />
                 </DoubleColumn>
+            </section>
+
+            <section id="contact-section">
+                <a name="contact" href="#contact">
+                    <h1>Contact</h1>
+                    Feel free to contact me through email at nmusey@gmail.com with any questions or comments you might have.
+                </a>
+                
             </section>
         </main>
     )

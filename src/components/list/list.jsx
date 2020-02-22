@@ -1,18 +1,18 @@
 import React from 'react';
 
-import './fancy-list.styles.scss'
+import './list.styles.scss'
 
 /**
  * 
  * Expects a title and an array of strings
  */
-const FancyList = ({ title, array }) => (
-    <div className="fancy-list">
-        <h1>{title}</h1>
+const List = ({ title, array }) => (
+    <div className="list">
+        <span className="list-title"><h1>{title}</h1></span>
         <ul>
             { array.map( item => { return (<li key={array.indexOf(item)}>{item}</li>) } ) }
         </ul>
     </div>
 )
 
-export default FancyList;
+export default List;
