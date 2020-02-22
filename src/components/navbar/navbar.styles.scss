@@ -1,11 +1,15 @@
+$nav-bg-color: #eeeeee;
+$drawer-height: 100px;
+$drawer-num-elements: 2;
+$drawer-text-height: calc($drawer-height / $drawer-num-elements);
+
 nav {
     position: fixed;
     top: 0px;
-
-    background-color: white;
+    left: 0px;
     padding-bottom: 10px;
     
-    width: 100%;
+    width: 100vw;
     min-height: 50px;
 
     display: flex;
@@ -18,31 +22,47 @@ nav {
         flex-direction: row;
         justify-content: flex-start;
 
+        background-color: $nav-bg-color;
+
         :first-child {
             padding-left: 30px;
         }
     }
-
-    .nav-item-container {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        margin-right: 30px;
-        padding-left: 150px;
-    }
-
-    .nav-item {
-        margin-right: 30px;
-    }
 }
 
-.nav-menu {
-        font-size: 4em;
-        cursor: pointer;
-        margin: 0;
-        margin-top: -12px;
-        padding: 0;
-        background: none;
-        border: none;  
+.nav-drawer {
+    z-index: -1;
+    transition: 0.2s ease-in-out transform;
 }
+
+.nav-drawer-vis {
+    transform: translateY(0);
+    background-color: $nav-bg-color;
+}
+
+.nav-drawer-invis {
+    background: rgba(0, 0, 0, 0); 
+    transform: translateY(-100%);
+    opacity: 0;
+    height: 0px;
+}
+
+.nav-item {
+    height: $drawer-text-height;
+    margin-left: 150px;
+}
+
+.nav-button {
+    font-size: 4em;
+    cursor: pointer;
+    margin: 0;
+    margin-top: -12px;
+    padding: 0;
+    background: none;
+    border: none;  
+}
+
+// @keyframes nav-drawer-dropdown {
+//     from { transform: translateY(-100%); }
+//     to { transform: translateY(0); }
+// }

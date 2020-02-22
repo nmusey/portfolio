@@ -20,7 +20,7 @@ class Navbar extends React.Component {
         this.collapseWidth = props.collapseWidth || 600; 
 
         this.state = { 
-            collapsed: false, 
+            collapsed: true, 
             bigWindow: (window.innerWidth >= this.collapseWidth)
         }
     }
@@ -60,35 +60,37 @@ class Navbar extends React.Component {
     render() {
         const { title, titleLink, children } = this.props;
         
+        console.log(this.state);
+
         return (
             <nav>
                 <div className="nav-left">
                     {/* Conditionally render hamburger symbol */}
-                    {/* { this.state.bigWindow &&  */}
-                        {/* ( */}
-                        <div 
-                            className="nav-menu"
-                            onClick={()=>this.collapseNav()}
-                        >≡ </div>
-                        {/* ) */}
-                    {/* } */}
+                    <button
+                        type="radio" 
+                        className="nav-button"
+                        onClick={()=>this.collapseNav()}
+                    >≡ </button>
 
                     {/* Always render the title */}
                     <a href={titleLink}><h2>{title}</h2></a>
                 </div> 
 
                 {/* Conditionally render right of navbar */}
-                {/* this.state.bigWindow */}
-                { (!this.state.collapsed) &&
-                    (<div className="nav-item-container">
-                        { children.map( ({name, url, id}) => (
-                            <a className="nav-item" href={url} key={id}>
-                                <h3>{name}</h3>
-                            </a>
-                        ))}
-                    </div>
-                    )
-                }
+                <div 
+                    className={ "nav-drawer " + (
+                        (this.state.collapsed || !this.state.bigWindow)
+                        ? 
+                        "nav-drawer-invis" 
+                        :
+                        "nav-drawer-vis"
+                )}>
+                    { !this.state.collapsed && children.map( ({name, url, id}) => (
+                        <a  href={url} key={id}>
+                            <h3 className="nav-item">{name}</h3>
+                        </a>
+                    ))}
+                </div> 
             </nav>
         )
     }
