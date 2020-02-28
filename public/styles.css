@@ -24,11 +24,25 @@ section {
     margin-bottom: 50px
 }
 
+
+
 .homepage {
     margin-top: 7vh;
     margin-bottom: 7vh;
     padding-left: 2vw;
     padding-right: 2vw;
+}
+
+.interactive {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.interactive:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+    transition: transform 0.2s linear,
+                opacity 0.3s linear;
 }
 
 #landing-section {
@@ -39,3 +53,18 @@ section {
     position: inline;
     padding-top: var(--navbar-height);
 } 
+
+#landing-text h1 {
+    animation: 1s ease-out fly-from-right;
+}
+
+#landing-text h3 {
+    transform: translateX(100vw);
+    animation: 1s ease-out 1s fly-from-right forwards;
+}
+
+
+@keyframes fly-from-right {
+    from { transform: translateX(100vw); }
+    to { transform: translateX(0); }
+}

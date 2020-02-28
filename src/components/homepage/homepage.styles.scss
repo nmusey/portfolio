@@ -1,7 +1,8 @@
-.homepage {
 
-    .landing {
-        padding-top: 100px;
-    }
+.landing {
+    padding-top: 100px;
+}
 
+.personal-information:last-child {
+    padding-bottom: 5px; /* Allows contact to animate after scrolling the whole way down */
 }

@@ -59,8 +59,6 @@ class Navbar extends React.Component {
      */
     render() {
         const { title, titleLink, children } = this.props;
-        
-        console.log(this.state);
 
         return (
             <nav>
@@ -68,26 +66,23 @@ class Navbar extends React.Component {
                     {/* Conditionally render hamburger symbol */}
                     <button
                         type="radio" 
-                        className="nav-button"
+                        className="nav-button interactive"
                         onClick={()=>this.collapseNav()}
                     >≡ </button>
 
                     {/* Always render the title */}
-                    <a href={titleLink}><h2>{title}</h2></a>
+                    <a href={titleLink}> <h2>{title}</h2> </a>
                 </div> 
 
                 {/* Conditionally render right of navbar */}
                 <div 
-                    className={ "nav-drawer " + (
+                    className={ `nav-drawer " ${
                         (this.state.collapsed || !this.state.bigWindow)
-                        ? 
-                        "nav-drawer-invis" 
-                        :
-                        "nav-drawer-vis"
-                )}>
+                        ? "nav-drawer-invis" : "nav-drawer-vis"}`
+                }>
                     { !this.state.collapsed && children.map( ({name, url, id}) => (
                         <a  href={url} key={id}>
-                            <h3 className="nav-item">{name}</h3>
+                            <h3 className="nav-item interactive ">{name}</h3>
                         </a>
                     ))}
                 </div> 

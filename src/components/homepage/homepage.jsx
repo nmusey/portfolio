@@ -12,23 +12,25 @@ import './homepage.styles.scss';
 
 
 
-const Homepage = () => {
 
-    // Links declared here with title, url, and id.
-    const navbarLinks = [
-        {
-            name: "Projects",
-            url: "#projects",
-            id: 1
-        }, {
-            name: "Skills",
-            url: "#skills",
-            id: 2
-        }
-    ]
+
+/**
+ * Homepage
+ * 
+ * Renders a homepage. Not intended to be incredibly reusable,
+ *  just meant to tie together some other reusable components.
+ */
+class Homepage extends React.Component {
+
+    constructor() {
+        super();
+        this.windowHeight = window.innerHeight; // Used for scroll animations
+        this.scrollAnimated = false; // Only animates once. Flips after animating
+    }
+
 
     // These are rendered by  a component later
-    const skills = [
+    skillsArray = [
         'Front-End Development using React',
         'RESTful API Development using Express.js and Node.js',
         'Python',
@@ -37,24 +39,48 @@ const Homepage = () => {
     ]
 
     // These are rendered by a component later
-    const learningNow = [
+    learningNowArray = [
         'React Hooks', 'Django', 'Artificial Intelligence',
         'Database Design'
     ]
 
 
+    sections = [{
+        name: "Projects",
+        jsx: (<ProjectContainer id="project-container" username="octocat" />)
+    }, {
+        name: "Skills",
+        jsx: (
+            <DoubleColumn>
+                <List title="My Skills" array={this.skillsArray} />
+                <List title="What I'm Learning Now" array={this.learningNowArray} />
+            </DoubleColumn>)
+    }, {
+        name: "Contact",
+        jsx: ( <p>Feel free to contact me through email at nmusey@gmail.com with any questions or comments you might have.</p> )
+    }]
 
-    return (
+
+    navbarLinks = this.sections.map( section => ({
+        name: section.name,
+        url: "#" + section.name.toLowerCase(),
+        id: this.sections.indexOf(section)
+    }) )
+
+
+    render()  {
+        return(
         <main className="homepage">
             <Navbar 
                 title="Nick Musey"
                 titleLink="#landing"
             >
-                {navbarLinks}
+                {this.navbarLinks}
             </Navbar>
 
             <section id="landing-section">
                 <Landing 
+                    className="landing"
                     title="Hi, I'm Nick"
                     subtitle="I'm a 4th year Computer Science and Psychology student the the University of Victoria"
                     picture={ProfileImage}
@@ -62,28 +88,22 @@ const Homepage = () => {
                 />
             </section>
 
-            <Section title="Projects" id="projects"
-                component={(<ProjectContainer id="project-container" username="nmusey" />)}
-            />
-
-            <Section title="Skills" id="skills"
-                component={(
-                    <DoubleColumn>
-                        <List title="My Skills" array={skills} />
-                        <List title="What I'm Learning Now" array={learningNow} />
-                    </DoubleColumn>)}
-            />            
-
-
-
-            <Section title="Contact" id="contact"
-                component={(
-                    <p>Feel free to contact me through email at nmusey@gmail.com with any questions or comments you might have.</p>
-                )}
-            />
+            <div className="personal-information">
+            {
+                this.sections.map( section => (
+                    <Section 
+                        title={section.name}
+                        key={this.sections.indexOf(section)}
+                        id={section.name.toLowerCase()}
+                        animationheightbuffer={150}
+                        component={section.jsx}
+                    />
+                ) )
+            }
+            </div>
 
         </main>
-    )
+    )}
 }
 
 

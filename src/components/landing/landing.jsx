@@ -27,6 +27,10 @@ const Landing = ({ title, subtitle, picture, altText }) => {
                     <h3>{subtitle}</h3>
                 </div>
             </DoubleColumn>
+            <button 
+                id="scroll-button"
+                onClick={() => window.scrollTo(0, window.innerHeight) }
+            > V </button>
         </div>
     )
 }
