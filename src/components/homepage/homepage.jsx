@@ -20,17 +20,10 @@ import './homepage.styles.scss';
  * Renders a homepage. Not intended to be incredibly reusable,
  *  just meant to tie together some other reusable components.
  */
-class Homepage extends React.Component {
-
-    constructor() {
-        super();
-        this.windowHeight = window.innerHeight; // Used for scroll animations
-        this.scrollAnimated = false; // Only animates once. Flips after animating
-    }
-
+const Homepage = () => {
 
     // These are rendered by  a component later
-    skillsArray = [
+    const skillsArray = [
         'Front-End Development using React',
         'RESTful API Development using Express.js and Node.js',
         'Python',
@@ -39,21 +32,21 @@ class Homepage extends React.Component {
     ]
 
     // These are rendered by a component later
-    learningNowArray = [
+    const learningNowArray = [
         'React Hooks', 'Django', 'Artificial Intelligence',
         'Database Design'
     ]
 
 
-    sections = [{
+    const sections = [{
         name: "Projects",
-        jsx: (<ProjectContainer id="project-container" username="octocat" />)
+        jsx: (<ProjectContainer id="project-container" username="nmusey" />)
     }, {
         name: "Skills",
         jsx: (
             <DoubleColumn>
-                <List title="My Skills" array={this.skillsArray} />
-                <List title="What I'm Learning Now" array={this.learningNowArray} />
+                <List title="My Skills" array={skillsArray} />
+                <List title="What I'm Learning Now" array={learningNowArray} />
             </DoubleColumn>)
     }, {
         name: "Contact",
@@ -61,21 +54,19 @@ class Homepage extends React.Component {
     }]
 
 
-    navbarLinks = this.sections.map( section => ({
+    const navbarLinks = sections.map( section => ({
         name: section.name,
         url: "#" + section.name.toLowerCase(),
-        id: this.sections.indexOf(section)
+        id: sections.indexOf(section)
     }) )
 
-
-    render()  {
-        return(
+    return(
         <main className="homepage">
             <Navbar 
                 title="Nick Musey"
                 titleLink="#landing"
             >
-                {this.navbarLinks}
+                {navbarLinks}
             </Navbar>
 
             <section id="landing-section">
@@ -90,12 +81,12 @@ class Homepage extends React.Component {
 
             <div className="personal-information">
             {
-                this.sections.map( section => (
+                sections.map( section => (
                     <Section 
                         title={section.name}
-                        key={this.sections.indexOf(section)}
+                        key={sections.indexOf(section)}
                         id={section.name.toLowerCase()}
-                        animationheightbuffer={150}
+                        animationheightbuffer={200}
                         component={section.jsx}
                     />
                 ) )
@@ -103,7 +94,7 @@ class Homepage extends React.Component {
             </div>
 
         </main>
-    )}
+    )
 }
 
 

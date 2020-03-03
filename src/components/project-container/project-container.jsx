@@ -27,31 +27,22 @@ class ProjectContainer extends React.Component {
 
     /* Fetches Github repos using username stored in the class */
     fetchRepos() {
-        // let projects = [];
-        // fetch(`https://api.github.com/users/${this.props.username}/repos?per_page=${this.maxRepos}`)
-        //     .then( res => res.json() )
-        //     .then( repos => {
-        //         repos.forEach( 
-        //             repo => {
-        //                 const { name, description, id } = repo;
-        //                 const url = `https://www.github.com/${this.username}/${name}`; // create the url for the project
-        //                 projects.push( { name, description, url, id} );
-        //         });
-        //         this.setState({ isFetching: false });
-        //     })
-        //     .catch(err => {
-        //         console.error(err);
-        //         this.setState({ projects: { name: "Error fetching projects", id: 0, url: ""} })
-        // })
-
-        let projects = [
-            {
-                name: "FAKE PROJECT",
-                description: "REMEMBER REVERSE THIS BEFORE COMMITTING",
-                id: 1,
-                url: "https://google.com"
-            }
-        ]
+        let projects = [];
+        fetch(`https://api.github.com/users/${this.props.username}/repos?per_page=${this.maxRepos}`)
+            .then( res => res.json() )
+            .then( repos => {
+                repos.forEach( 
+                    repo => {
+                        const { name, description, id } = repo;
+                        const url = `https://www.github.com/${this.username}/${name}`; // create the url for the project
+                        projects.push( { name, description, url, id} );
+                });
+                this.setState({ isFetching: false });
+            })
+            .catch(err => {
+                console.error(err);
+                this.setState({ projects: { name: "Error fetching projects", id: 0, url: ""} })
+        })
 
         this.setState({ isFetching: false });
 

@@ -8,7 +8,7 @@ import './section.styles.scss';
  * @param title Title of the section
  * @param id id for navigation to the section
  * @param component component to render - can be more than
- * @param animationheightbuffer Height in pixels before the component animates to visible, defaults to 150px.
+ * @param animationheightbuffer Height in pixels before the component animates to visible, defaults to 200px.
  */
 class Section extends React.Component {
 
@@ -21,7 +21,7 @@ class Section extends React.Component {
             hasAnimated: false,
             willAnimate: false,
             previousScroll: 0,
-            animationHeightBuffer: props.animationheightbuffer || 150
+            animationHeightBuffer: props.animationheightbuffer || 200
         }
     
     }
@@ -32,9 +32,6 @@ class Section extends React.Component {
     componentDidMount() {
         const node = ReactDOM.findDOMNode(this)
         this.setState({ yPosition: node.getBoundingClientRect().y });
-
-        console.log(node);
-        console.log(window.scrollY);
 
         window.addEventListener('scroll', () => {
             const windowTop = Math.round(window.scrollY) - this.state.animationHeightBuffer ;
@@ -66,19 +63,11 @@ class Section extends React.Component {
 
     render() {
         const {title, id, component} = this.props;
-
-        if (this.state.willAnimate) {
-            console.log(this.props.title + " will animate");
-        }
-        if (this.state.hasAnimated) {
-            console.log("Already animated");
-        }
-
-        console.log("RENDER");
+        let {willAnimate, hasAnimated} = this.state;
 
         return (
             <section id={id} ref={this.viewRef} 
-                className={(this.state.willAnimate || this.state.hasAnimated) ? "scroll-animate" : "" }
+                className={`scroll-animate ${(willAnimate || hasAnimated) ? "scroll-animate-active" : ""}`}
             >
                 <a href={"#" + id} name={id}>
                     <h2 

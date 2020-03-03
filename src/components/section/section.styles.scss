@@ -4,5 +4,15 @@
 }
 
 .scroll-animate {
-    animation: 1s ease-out 1 normal both fade-in;
+    opacity: 0;
+    
+}
+
+.scroll-animate-active {
+    animation: 1s ease-out 1 normal forwards fade-in;
+    opacity: 1;
+}
+
+.visible {
+    background-color: red;
 }

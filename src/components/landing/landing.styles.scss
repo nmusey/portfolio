@@ -17,26 +17,6 @@
     border-radius: var(--profile-size);
 }
 
-#scroll-button {
-    border: none;
-    background: none;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    animation: 
-        fade-in 1s ease-out 3s both,
-        pulse 2s infinite paused;
-
-    &:hover {
-        animation-play-state: running;
-    }
-
-    &:active {
-        border: 1px solid #333333;
-    }
-    
-} 
-
 @media (max-width: 552px) {
     :root {
         --profile-size: 256px;
@@ -52,14 +32,4 @@
 @keyframes fade-in {
     from { opacity: 0; }
     to { opacity: 1; }
-}
-
-@keyframes pulse {
-    50% { 
-        transform: scale(1.2) translateY(15px); 
-        opacity: 0.7;
-    }
-    100% { 
-        transform: scale(1);
-     }
 }
