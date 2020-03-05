@@ -73,7 +73,7 @@ const Homepage = () => {
                 <Landing 
                     className="landing"
                     title="Hi, I'm Nick"
-                    subtitle="I'm a 4th year Computer Science and Psychology student the the University of Victoria"
+                    subtitle="I'm a 4th year Computer Science and Psychology student the University of Victoria"
                     picture={ProfileImage}
                     alt="Picture of Nick"
                 />

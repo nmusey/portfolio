@@ -34,6 +34,8 @@ class Navbar extends React.Component {
     }
 
 
+
+
     /**
      * Utility function to set bigWindow in state
      */
@@ -63,9 +65,9 @@ class Navbar extends React.Component {
         return (
             <nav>
                 <div className="nav-left">
-                    {/* Conditionally render hamburger symbol */}
+                    {/* Always render the hamburger button */}
                     <button
-                        type="radio" 
+                        type="switch" 
                         className="nav-button interactive"
                         onClick={()=>this.collapseNav()}
                     >≡ </button>
@@ -77,8 +79,8 @@ class Navbar extends React.Component {
                 {/* Conditionally render right of navbar */}
                 <div 
                     className={ `nav-drawer " ${
-                        (this.state.collapsed || !this.state.bigWindow)
-                        ? "nav-drawer-invis" : "nav-drawer-vis"}`
+                        (!this.state.collapsed || this.state.bigWindow)
+                        ? "nav-drawer-vis" : "nav-drawer-invis"}`
                 }>
                     { !this.state.collapsed && children.map( ({name, url, id}) => (
                         <a  href={url} key={id}>
