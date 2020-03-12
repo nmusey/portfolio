@@ -78,13 +78,17 @@ class Navbar extends React.Component {
 
                 {/* Conditionally render right of navbar */}
                 <div 
-                    className={ `nav-drawer " ${
-                        (!this.state.collapsed || this.state.bigWindow)
+                    className={ `nav-drawer ${
+                        (!this.state.collapsed && this.state.bigWindow)
                         ? "nav-drawer-vis" : "nav-drawer-invis"}`
                 }>
                     { !this.state.collapsed && children.map( ({name, url, id}) => (
-                        <a  href={url} key={id}>
-                            <h3 className="nav-item interactive ">{name}</h3>
+                        <a  
+                            href={url} 
+                            key={id}
+                            onClick={()=>window.dispatchEvent(new CustomEvent('navScroll'))}
+                        >
+                        <h3 className="nav-item interactive ">{name}</h3>
                         </a>
                     ))}
                 </div> 

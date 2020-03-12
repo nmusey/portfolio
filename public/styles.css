@@ -89,3 +89,8 @@ section {
     from { transform: translateX(100vw); }
     to { transform: translateX(0); }
 }
+
+@keyframes drawerGrow{
+    from { transform: scaleY(0); }
+    to { transform: scaleY(1); }
+}

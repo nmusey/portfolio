@@ -25,21 +25,16 @@ nav {
 }
 
 .nav-drawer {
-    z-index: -1;
-    transition: 0.2s ease-in-out transform;
+    z-index: 4000;
+    transform-origin: top;
 }
 
 .nav-drawer-vis {
-    display: fixed;
-    z-index: 4000;
-    transform: translateY(0);
+    transform: scaleY(1);
 }
 
 .nav-drawer-invis {
-    background: none;
-    transform: translateY(-100%);
-    opacity: 0;
-    height: 0px;
+    transform: scaleY(0);
 }
 
 .nav-item {

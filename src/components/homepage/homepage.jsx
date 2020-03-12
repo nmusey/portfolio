@@ -33,7 +33,7 @@ const Homepage = () => {
 
     // These are rendered by a component later
     const learningNowArray = [
-        'React Hooks', 'Django', 'Artificial Intelligence',
+        'Django', 'Artificial Intelligence',
         'Database Design'
     ]
 

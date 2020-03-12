@@ -33,6 +33,7 @@ class Section extends React.Component {
         const node = ReactDOM.findDOMNode(this)
         this.setState({ yPosition: node.getBoundingClientRect().y });
 
+        // scroll is the native event, navScroll is fired from the Navbar.
         window.addEventListener('scroll', () => {
             const windowTop = Math.round(window.scrollY) - this.state.animationHeightBuffer ;
             const windowBottom = windowTop + window.innerHeight;
@@ -43,7 +44,9 @@ class Section extends React.Component {
             const hasAnimated = this.state.hasAnimated || willAnimate;
 
             this.setState({ willAnimate, hasAnimated });
-        })
+        });
+
+        window.addEventListener('navScroll', () => this.setState({ willAnimate: true }));
     }
 
 
@@ -51,12 +54,21 @@ class Section extends React.Component {
         Once the component has animated, stop updating since it doesn't change anything.
     */
     shouldComponentUpdate() {
-        return this.state.hasAnimated && (window.scrollY > this.state.previousScroll + 50);
+        return (this.state.hasAnimated 
+                    && 
+                (window.scrollY > this.state.previousScroll + 50)) 
+                
+                || 
+                this.state.willAnimate
+            ;
     }
 
     /* Track whether user scrolled down to save unnecessary udpating */
     componentDidUpdate() {
         this.setState({ previousScroll: window.scrollY });
+        if (this.state.willAnimate) {
+            this.setState({ willAnimate: false });
+        }
     }
 
 
