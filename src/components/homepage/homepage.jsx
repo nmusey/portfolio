@@ -27,14 +27,12 @@ const Homepage = () => {
         'Front-End Development using React',
         'RESTful API Development using Express.js and Node.js',
         'Python',
-        'PostgreSQL and MongoDB experience',
-        'Object Oriented Programming'
+        'PostgreSQL'
     ]
 
     // These are rendered by a component later
     const learningNowArray = [
-        'Django', 'Artificial Intelligence',
-        'Database Design'
+        'Machine learning theory & practice',
     ]
 
 
