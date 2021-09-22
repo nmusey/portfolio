@@ -10,4 +10,4 @@ First clone the project and open it in an editor. The most common thing to chang
 Content all lives in the same `homepage` component, the rest of the components are brought in from there and shouldn't need to be changed unless there's a bug.
 
 ## Deployment
-After committing changes, the site can be deployed by following the instructions found [here](https://github.com/nmusey/nmusey.github.io#deploying).
+After committing and pushing changes, the site can be deployed by following the instructions found [here](https://github.com/nmusey/nmusey.github.io#deploying).
