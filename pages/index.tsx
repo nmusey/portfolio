@@ -1,4 +1,4 @@
-import {MultiColumn} from "../components/multi-column";
+import {MultiColumn} from "../components/MultiColumn";
 
 const HomePage = () => {
     const columns = [
