@@ -8,7 +8,7 @@ const HomePage = () => {
     ];
 
     return (
-        <MultiColumn numberColumns={3} columns={columns} />
+        <MultiColumn columns={columns} />
     );
 }
 
