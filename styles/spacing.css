@@ -1,0 +1,9 @@
+@import "./theme.css";
+
+.pd-md {
+    padding: var(--spacing-md);
+}
+
+.mg-md {
+    margin: var(--spacing-md);
+}

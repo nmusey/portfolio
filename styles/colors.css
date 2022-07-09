@@ -1,0 +1,6 @@
+@import "./theme.css";
+
+.primary {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
