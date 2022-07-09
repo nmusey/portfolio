@@ -1,0 +1,12 @@
+.full-width {
+    width: 100%;
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: row;
+}
+
+.space-around {
+    justify-content: space-around;
+}

@@ -1,5 +1,15 @@
+import {MultiColumn} from "../components/multi-column";
+
 const HomePage = () => {
-    return <h1>Hello world</h1>;
+    const columns = [
+        <h1>Column 1</h1>,
+        <h1>Column 2</h1>,
+        <h1>Column 3</h1>,
+    ];
+
+    return (
+        <MultiColumn numberColumns={3} columns={columns} />
+    );
 }
 
 export default HomePage;
