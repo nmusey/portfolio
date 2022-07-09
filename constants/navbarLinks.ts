@@ -4,5 +4,6 @@ export interface NavbarLink {
 }
 
 export const navbarLinks: NavbarLink[] = [
-    {url: "/", title: "Home"}
+    {url: "/", title: "Home"},
+    {url: "/projects", title: "Projects"}
 ]

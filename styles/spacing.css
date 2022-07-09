@@ -4,6 +4,16 @@
     padding: var(--spacing-md);
 }
 
+.pd-md-x {
+    padding-right: var(--spacing-md);
+    padding-left: var(--spacing-md);
+}
+
 .mg-md {
     margin: var(--spacing-md);
+}
+
+.mg-md-x {
+    margin-right: var(--spacing-md);
+    margin-left: var(--spacing-md);
 }

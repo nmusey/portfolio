@@ -1,12 +1,13 @@
 import {ReactElement} from "react";
 import useWidthQuery from "../hooks/useWidthQuery";
+import {ColumnMinWidth} from "../constants/width";
 
 interface Props {
     columns: ReactElement[];
 }
 
 export const MultiColumn = (props: Props) => {
-    const totalWideWith = 200 * props.columns.length
+    const totalWideWith = ColumnMinWidth * props.columns.length
     const isWide = useWidthQuery(`${totalWideWith}px`);
 
     return (
