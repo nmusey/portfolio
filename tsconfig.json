@@ -27,6 +27,7 @@
     "noUnusedLocals": true,
     "strict": true,
     "removeComments": true,
+    "resolveJsonModule": true,
     "allowJs": false,
     "forceConsistentCasingInFileNames": true,
     "lib": [

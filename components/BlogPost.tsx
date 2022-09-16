@@ -1,11 +1,11 @@
 import ReactMarkdown from "react-markdown";
 
 export interface Props {
-    postContents: string; 
+    contents: string; 
 }
 
 export const BlogPost = (props: Props) => {
     return (
-        <ReactMarkdown>{props.postContents}</ReactMarkdown>
+        <ReactMarkdown>{props.contents}</ReactMarkdown>
     )
 }

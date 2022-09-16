@@ -1,0 +1,12 @@
+[
+    {
+        "title": "Test 1",
+        "summary": "A test post for developing the blog",
+        "filename": "test1.md"
+    },
+    {
+        "title": "Test 2",
+        "summary": "A second test post for developing the blog",
+        "filename": "test2.md"
+    }
+]
