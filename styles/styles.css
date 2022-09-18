@@ -17,8 +17,12 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 a {
-   color: var(--on-primary);
+    color: var(--on-);
     text-decoration: none;
+}
+
+nav a {
+    color: var(--text-color);
 }
 
 nav:first-child {
