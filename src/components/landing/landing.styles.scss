@@ -1,0 +1,35 @@
+:root {
+    --profile-size: 512px;
+}
+
+
+.landing-bg {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.profilePicture {
+    height: var(--profile-size );
+    border-radius: var(--profile-size);
+}
+
+@media (max-width: 552px) {
+    :root {
+        --profile-size: 256px;
+    }
+}
+
+@media (max-width: 300px) {
+    :root {
+        --profile-size: 128px;
+    }
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
