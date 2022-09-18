@@ -1,0 +1,26 @@
+@import "./layout.css";
+@import "./theme.css";
+@import "./colors.css";
+@import "./spacing.css";
+
+body {
+    width: 100%;
+    min-height: 100%;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    text-align: center;
+}
+
+a {
+   color: var(--on-primary);
+    text-decoration: none;
+}
+
+nav:first-child {
+    margin-right: auto;
+}
