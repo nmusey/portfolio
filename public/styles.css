@@ -1,0 +1,96 @@
+/* Global Styles */
+/* Nick Musey */
+
+:root {
+    --navbar-height: 50px;
+
+    --text-colour: #EFEFEF;
+    --bg-colour: #1B1B1B;
+    --accent-colour: #4500D1
+
+}
+
+body {
+    width: 100vw;
+    background-size: cover;
+
+    background-color: var(--bg-colour);
+    color: var(--text-colour);
+}
+
+body a {
+    text-decoration: none;
+    color: var(--text-colour);
+}
+
+h2 {
+    color: var(--accent-colour);
+}
+
+nav {
+    background-color: var(--accent-colour);
+    width: 100vw;
+}
+
+nav * {
+    color: var(--text-colour);
+}
+
+nav button {
+    color: var(--text-colour);
+}
+
+section {
+    margin-bottom: 50px
+}
+
+
+
+.homepage {
+    margin-top: 7vh;
+    margin-bottom: 7vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.interactive {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.interactive:hover {
+    transform: scale(1.05);
+    opacity: 0.8;
+    transition: transform 0.2s linear,
+                opacity 0.3s linear;
+}
+
+#landing-section {
+    height: calc(100vh - var(--navbar-height) );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: inline;
+    padding-top: var(--navbar-height);
+} 
+
+#landing-text h1 {
+    animation: 1s ease-out fly-from-right;
+}
+
+#landing-text h3 {
+    transform: translateX(100vw);
+    animation: 1s ease-out 1s fly-from-right forwards;
+}
+
+
+
+@keyframes fly-from-right {
+    from { transform: translateX(100vw); }
+    to { transform: translateX(0); }
+}
+
+@keyframes drawerGrow{
+    from { transform: scaleY(0); }
+    to { transform: scaleY(1); }
+}
