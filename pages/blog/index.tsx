@@ -1,4 +1,4 @@
-import postMetadataList from "../../posts.json";
+import postMetadataList from "../../posts/posts.json";
 import {BlogSummary} from "../../components/BlogSummary";
 
 interface PostMetadata {

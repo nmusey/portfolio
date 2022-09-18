@@ -6,7 +6,7 @@ export interface Props {
 
 export const BlogSummary = (props: Props) => {
     return (
-        <a href={`posts/${props.filename}`}>
+        <a href={`blog/${props.filename}`}>
             <div>
                 <h4>{props.title}</h4>
                 <p>{props.summary}</p>

@@ -5,6 +5,7 @@ export interface Props {
 }
 
 export const BlogPost = (props: Props) => {
+    console.log(props);
     return (
         <ReactMarkdown>{props.contents}</ReactMarkdown>
     )

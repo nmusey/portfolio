@@ -2,11 +2,13 @@
     {
         "title": "Test 1",
         "summary": "A test post for developing the blog",
-        "filename": "test1.md"
+        "filename": "test-post.md",
+        "slug": "test1"
     },
     {
         "title": "Test 2",
         "summary": "A second test post for developing the blog",
-        "filename": "test2.md"
+        "filename": "test-post.md",
+        "slug": "test2"
     }
 ]
