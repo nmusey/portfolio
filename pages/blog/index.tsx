@@ -1,14 +1,9 @@
 import postMetadataList from "../../posts/posts.json";
 import {BlogSummary} from "../../components/BlogSummary";
-
-interface PostMetadata {
-    title: string;
-    summary: string;
-    filename: string;
-};
+import {Post} from "../../types/post";
 
 export const BlogListPage = () => {
-    const metadata = postMetadataList as PostMetadata[]; 
+    const metadata = postMetadataList as Post[]; 
     return metadata.map(({title, summary, filename}) => <BlogSummary title={title} summary={summary} filename={filename} />);
 };
 

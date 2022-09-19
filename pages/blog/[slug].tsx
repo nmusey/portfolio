@@ -1,7 +1,7 @@
 import fs from "fs";
 import {postFilePath} from "../../utils/files";
 import postList from "../../posts/posts.json";
-import {Post} from "../../posts/Post";
+import {Post} from "../../types/Post";
 import {BlogPost} from "../../components/BlogPost";
 import {GetStaticPropsContext} from "next";
 
