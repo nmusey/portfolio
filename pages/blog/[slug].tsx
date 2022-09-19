@@ -27,7 +27,6 @@ export const getStaticProps = async (context: GetStaticPropsContext) => {
 }
 
 export const SlugPage = (props: Props) => {
-    console.log(props);
     return <BlogPost contents={props.contents} />;
 }
 
