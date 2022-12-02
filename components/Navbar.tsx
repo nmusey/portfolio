@@ -29,7 +29,7 @@ export const Navbar = (props: Props) => {
                     </a>
                 </Link>
                 <Link href={firstLink?.url || "/"}>
-                    <a className="mg-md-x">
+                    <a className="mg-md-x ">
                         {firstLink?.title || "Nick Musey"}
                     </a>
                 </Link>

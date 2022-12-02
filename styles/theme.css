@@ -1,12 +1,11 @@
 :root {
     /* Colors */
-    --primary-color: #8800AD;
-    --light-color: #E5DCDA;
-    --dark-color: #040100;
+    --light-color: #1FFFC7;
+    --dark-color: #00067A;
 
-    --on-primary: var(--light-color);
-    --text-color: var(--dark-color);
-    --bg-color: var(--light-color);
+    --on-primary: var(--dark-color);
+    --text-color: var(--light-color);
+    --bg-color: var(--dark-color);
 
     /* Spacing */
     --spacing-xs: 4px;
