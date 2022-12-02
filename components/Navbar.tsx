@@ -11,10 +11,8 @@ export const Navbar = (props: Props) => {
     const isWide = useWidthQuery(`${DesktopMinWidth}px`);
 
     const renderWideView = () => props.links.map(link => (
-            <Link href={link.url}>
-                <a className="mg-md-x">
-                    {link.title}
-                </a>
+            <Link href={link.url} className="mg-md-x">
+                {link.title}
             </Link>
         )
     );
@@ -23,15 +21,11 @@ export const Navbar = (props: Props) => {
         const firstLink = props.links?.[0];
         return (
             <>
-                <Link href="#">
-                    <a className="mg-md-x">
+                <Link href="#" className="mg-md-x">
                     Menu
-                    </a>
                 </Link>
-                <Link href={firstLink?.url || "/"}>
-                    <a className="mg-md-x ">
-                        {firstLink?.title || "Nick Musey"}
-                    </a>
+                <Link href={firstLink?.url || "/"} className="mg-md-x">
+                    {firstLink?.title || "Nick Musey"}
                 </Link>
             </>
         );

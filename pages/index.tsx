@@ -1,4 +1,5 @@
-import {ProjectsList} from "../components/projects/ProjectsList";
+import React from "react";
+
 const HomePage = () => {
     return (
         <>
@@ -6,8 +7,6 @@ const HomePage = () => {
             <h2>I'm a fullstack developer from British Columbia, Canada.</h2>
 
             <h2>My Past Projects</h2>
-
-            <ProjectsList />
         </>
     );
 }
